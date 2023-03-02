@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'tasks.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -47,7 +48,11 @@ class _LoginState extends State<Login> {
                 ),
                 Center(
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const Tasks(),
+                        ));
+                      },
                       style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all<Color>(Colors.white),
